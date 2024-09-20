@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+//import AddExpense from './components/ExpenseItem';
+import ExpenseList  from './components/Expense/Expense';
+
+const App=()=>{
+  const date = new Date()
+  const expenses = [
+    { id: 1, title: 'Starter', price: 200, location: 'Restaurant',date : date },
+    { id: 2, title: 'Fuel', price: 500, location: 'Fuel Station' , date : date },
+    { id: 3, title: 'Kalki', price: 500, location: 'Movie Threater', date :date},
+    { id: 3, title: 'Beach', price: 16000, location: 'Goa', date :date},
+  ];
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <ExpenseList Items={expenses}/>
     </div>
   );
 }
 
 export default App;
+
+/*
+    {expenses.map((expense) => (
+        <AddExpense
+        date = {expense.date}
+       id={expense.id}
+       title={expense.title}
+       location={expense.location}
+       price={expense.price}
+    />
+   
+*/

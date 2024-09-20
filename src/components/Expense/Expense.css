@@ -1,0 +1,30 @@
+
+.expenses-list {
+    padding: 1rem;
+    background-color: rgb(31, 31, 31);
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    animation: fadeInUp 0.5s ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .expenses-list:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+                                                                                                  
